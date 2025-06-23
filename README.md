@@ -11,8 +11,9 @@ It can be used to:
 
 
 ***Anybody*** can try generating / visualizing / consuming geo location events with **geoBuilder** with 3 to 5 simple steps:
-1. [OPTIONAL] if you do not have access to geo location events, you can design them by using the [Google Maps Designer](https://www.google.com/maps/about/mymaps/)
+1. *[OPTIONAL]* if you do not have access to geo location events, you can design them by using the [Google Maps Designer](https://www.google.com/maps/about/mymaps/)
 2. Set up a Solace broker (check the [try Solace page](https://solace.com/try-it-now/) for a free trial)
-3. [OPTIONAL] run the geo location generator to publish events to the Solace Broker
+3. *[OPTIONAL]* run the geo location generator to publish events to the Solace Broker
 4. Use a HTML/javascript client template to visualize geo location events in a web browser
 5. Leverage geographical Fences with Polygons designed in Google Maps Designer (step 1) to detect moving Objects entering a geographical zone and react by publishing new events to the Solace Broker 
+
