@@ -19,7 +19,12 @@ It can be used to:
 
 **INSTRUCTIONS**
 In order to experience Geo Location Events you can use geoBuilder, A Solace Broker and a web browser
-- *[OPTIONAL]* In case you do not have access to applications that generate geo location events, Google Maps Editor allow to create vector paths and polygons for geofences  
-![image](https://github.com/user-attachments/assets/cf72f3b1-1fbb-449a-a85c-6bf46025235c)
+- *[OPTIONAL]* In case you do not have access to applications that generate geo location events, Google Maps Editor allow to create vector paths and polygons for geofences
+  - Open [Google Maps Designer](https://www.google.com/maps/about/mymaps/)
+  ![image](https://github.com/user-attachments/assets/d7d47e56-5184-4f4b-a86c-dcb8814e8d9a)
+  - log in to the Editor
+  ![image](https://github.com/user-attachments/assets/507ed8a3-e482-40bd-ae74-2d2ac987a4e2)  
+  - Draw your vector patch and polygons 
+  ![image](https://github.com/user-attachments/assets/cf72f3b1-1fbb-449a-a85c-6bf46025235c)
 
 
