@@ -15,9 +15,11 @@ It can be used to:
 2. Set up a Solace broker (check the [try Solace page](https://solace.com/try-it-now/) for a free trial)
 3. *[OPTIONAL]* run the geo location generator to publish events to the Solace Broker
 4. Use a HTML/javascript client template to visualize geo location events in a web browser
-5. Leverage geographical Fences with Polygons designed in Google Maps Designer (step 1) to detect moving Objects entering a geographical zone and react by publishing new events to the Solace Broker 
+5. Leverage geographical Fences with Polygons designed in Google Maps Designer (step 1) to detect moving Objects entering a geographical zone and react by publishing new events to the Solace Broker
 
-INSTRUCTIONS
-Follow these steps to enter the Geo Location events World:
-- 
+**INSTRUCTIONS**
+In order to experience Geo Location Events you can use geoBuilder, A Solace Broker and a web browser
+- *[OPTIONAL]* In case you do not have access to applications that generate geo location events, Google Maps Editor allow to create vector paths and polygons for geofences  
+![image](https://github.com/user-attachments/assets/cf72f3b1-1fbb-449a-a85c-6bf46025235c)
+
 
