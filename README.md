@@ -43,7 +43,8 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
        **<solacePassword>** **<numberOfPeople>** **<peopleWalkingPathFile>** **<numberOfPlanesTaxiing>** **<planesTaxiingPathFile>** **<numberOfPlanesTakingOff>**
        **<planesTakingOffPathFile>** **<numberOfVehicles>** **<VehiclesPathFile>**` 
 
-      `sudo docker run --rm -v /mnt/d/Solace/Software/demo/Rome-Airport-ADR/adr1/googleGeoPath/pathfiles:/usr/src/myapp/geofiles --name geoBuilder solace-geo-events-manager         tcps://mr-connection-sc3xt4qdp5v.messaging.solace.cloud:55443 perftestdemo mr-connection-sc3xt4qdp5v.messaging.solace.cloud:1883 solace-cloud-client
-       ltg0ugtodbfe6pina9p7a2qb0b 20 walkpath10.csv 10 planetaxipath.csv 5 planetakeoffpath.csv 10 vehiclePath.csv` 
+       ***[EXAMPLE]***
+      *`sudo docker run --rm -v /mnt/d/Solace/Software/demo/Rome-Airport-ADR/adr1/googleGeoPath/pathfiles:/usr/src/myapp/geofiles --name geoBuilder solace-geo-events-manager         tcps://mr-connection-sc3xt4qdp5v.messaging.solace.cloud:55443 perftestdemo mr-connection-sc3xt4qdp5v.messaging.solace.cloud:1883 solace-cloud-client
+       ltg0ugtodbfe6pina9p7a2qb0b 20 walkpath10.csv 10 planetaxipath.csv 5 planetakeoffpath.csv 10 vehiclePath.csv`*
 
 
