@@ -17,3 +17,7 @@ It can be used to:
 4. Use a HTML/javascript client template to visualize geo location events in a web browser
 5. Leverage geographical Fences with Polygons designed in Google Maps Designer (step 1) to detect moving Objects entering a geographical zone and react by publishing new events to the Solace Broker 
 
+**INSTRUCTIONS**
+Follow these steps to enter the Geo Location events World:
+- 
+
