@@ -21,6 +21,7 @@ It can be used to:
 5. Leverage geographical Fences with Polygons designed in Google Maps Designer (step 1) to detect moving Objects entering a geographical zone and react by publishing new events to the Solace Broker
 
 **INSTRUCTIONS**
+
 In order to experience Geo Location Events you can use geoBuilder, A Solace Broker and a web browser
 - *[OPTIONAL]* In case you do not have access to applications that generate geo location events, Google Maps Editor allow to create vector paths and polygons for geofences
   - Open [Google Maps Designer](https://www.google.com/maps/about/mymaps/)
