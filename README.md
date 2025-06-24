@@ -60,13 +60,20 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   - setup a web server (example NGINX)
   - copy the template web page client to the web server home page directory
   - configure the Solace connection parameters in the *`index.html`* page
-    
+      	- edit file parameters with the right values:
+   		* <YOUR_GOOGLE_MAPS_KEY>
+     		* <YOUR_SOLACE_USER>
+  		* <YOUR_SOLACE_PASSWORD>
+    		* <YOUR_SOLACE_VPN>
+      		* <YOUR_SOLACE_URL>
+		
+
       *EXAMPLE*
 
-       `mySessionProperties.userName = "uuuuuuuuuuuuuuu"; // Solace user name
-		   mySessionProperties.password = "ppppppppppppppp";  // Solace password
+       `mySessionProperties.userName = "myuser"; // Solace user name
+		   mySessionProperties.password = "mypassword";  // Solace password
 		   mySessionProperties.vpnName = "myvpn"; // Solace VPN
-		   mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace External facing broker for demos`
+		   mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace URL
   - Open your browser and open your geo Events page hosted in your web browser
     ![image](https://github.com/user-attachments/assets/9c75f615-0d19-486d-8cc9-662c09dfe2b0)
 
