@@ -1,6 +1,6 @@
 # Solace Geo-Builder
 
-![image](https://github.com/user-attachments/assets/dbf489ab-883e-4201-b0d5-351e2b218d17)
+![image](https://github.com/user-attachments/assets/1550a6f7-ad20-4453-b257-b2b3e6425c8f)
 
 ![image](https://github.com/user-attachments/assets/36af231d-2610-451f-8fe7-d8af6e7a2a12)
 
