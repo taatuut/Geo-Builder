@@ -68,7 +68,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
 
        `<script src="https://maps.googleapis.com/maps/api/js?key=nkvdwbWA8CuZWFMjQRQVMkrDgtguRNTAkjs5s&v=beta&libraries=visualization"></script>`
     
-    	mySessionProperties.userName = "myuser"; // Solace user
+    	`mySessionProperties.userName = "myuser"; // Solace user`
 
     	namySessionProperties.password = "mypassword";  // Solace password
 
