@@ -77,7 +77,8 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
     	`mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace URL` <BR>
 
   - Open your browser and open your geo Events page hosted in your web browser
-    ![image](https://github.com/user-attachments/assets/9c75f615-0d19-486d-8cc9-662c09dfe2b0)
+    ![image](https://github.com/user-attachments/assets/9c75f615-0d19-486d-8cc9-662c09dfe2b0) <BR>
 
+- when done, remember to stop the docker container: `sudo docker stop geoBuilder`<BR>
 
   **ENJOY!**
