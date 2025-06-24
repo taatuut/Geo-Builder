@@ -43,7 +43,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
 
 - *[OPTIONAL]* if you have designed you own vector path and polygons using the Google maps editor and exported them to csv you can run the geo location event generator
   - Build your docker container image of the geoBuilder geo locaion event Generator and fence detection engine: <BR>
-    	- mirror the Githib repo on your machine: `gh repo clone acagnetti/Geo-Builder` <BR>
+    	- mirror the Github repo on your machine: `gh repo clone acagnetti/Geo-Builder` <BR>
     	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager`<BR>
     
   - run the docker container:
@@ -67,17 +67,13 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
    		`<YOUR_GOOGLE_MAPS_KEY> <YOUR_SOLACE_USER> <YOUR_SOLACE_PASSWORD> <YOUR_SOLACE_VPN> <YOUR_SOLACE_URL>`
 		
 
-      *EXAMPLE*
+      *EXAMPLE* <BR>
 
-       `<script src="https://maps.googleapis.com/maps/api/js?key=nkvdwbWA8CuZWFMjQRQVMkrDgtguRNTAkjs5s&v=beta&libraries=visualization"></script>`
-    
-    	mySessionProperties.userName = "myuser"; // Solace user
-
-    	namySessionProperties.password = "mypassword";  // Solace password
-
-    	mySessionProperties.vpnName = "myvpn"; // Solace VPN
-
-    	mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace URL
+       `<script src="https://maps.googleapis.com/maps/api/js?key=nkvdwbWA8CuZWFMjQRQVMkrDgtguRNTAkjs5s&v=beta&libraries=visualization"></script>` <BR>
+    	mySessionProperties.userName = "myuser"; // Solace user <BR>
+    	namySessionProperties.password = "mypassword";  // Solace password <BR>
+    	mySessionProperties.vpnName = "myvpn"; // Solace VPN <BR>
+    	mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace URL <BR>
 
   - Open your browser and open your geo Events page hosted in your web browser
     ![image](https://github.com/user-attachments/assets/9c75f615-0d19-486d-8cc9-662c09dfe2b0)
