@@ -43,8 +43,8 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
 
 - *[OPTIONAL]* if you have designed you own vector path and polygons using the Google maps editor and exported them to csv you can run the geo location event generator
   - Build your docker container image of the geoBuilder geo locaion event Generator and fence detection engine:
-    	- mirror the Githib repo on your machine: `gh repo clone acagnetti/Geo-Builder`\n
-    	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager`\n
+    	- mirror the Githib repo on your machine: `gh repo clone acagnetti/Geo-Builder` <BR>
+    	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager`\n <BR>
     
   - run the docker container:
     
