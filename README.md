@@ -48,7 +48,11 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
     	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager .`<BR>
 
   - generate HTML/Javascript code to visualize/activate level zones in the Google Map and save them in the `js/genPolygons.js` file:
-   `sudo docker run --rm --name geoBuilder -v /mnt/d/Solace/Software/demo/Rome-Airport-ADR/adr1/googleGeoPath/pathfiles:/usr/src/myapp/geofiles solace-geo-events-manager GEOFENCEONLY SECURITY ./geofiles/walkpath10.csv TAXIING ./geofiles/planetaxipath.csv RUNWAY ./geofiles/planetakeoffpath.csv SHOPS ./geofiles/shops.csv` > js/genPolygons.js
+    `sudo docker run --rm --name geoBuilder -v <googleMapsExportFilePath>:/usr/src/myapp/geofiles solace-geo-events-manager GEOFENCEONLY <GEOFENCETAG1> ./geofiles/<GeoFenceExportFile1> <GEOFENCETAG2> ./geofiles/<GeoFenceExportFile2> ... > js/genPolygons.js`
+
+    *EXAMPLE* <BR>
+
+   `sudo docker run --rm --name geoBuilder -v /mnt/d/Solace/Software/demo/Rome-Airport-ADR/adr1/googleGeoPath/pathfiles:/usr/src/myapp/geofiles solace-geo-events-manager GEOFENCEONLY SECURITY ./geofiles/walkpath10.csv TAXIING ./geofiles/planetaxipath.csv RUNWAY ./geofiles/planetakeoffpath.csv SHOP ./geofiles/shops.csv > js/genPolygons.js`
     
   - run the docker container (use the google maps file export path set above and the file names given when exporting the map levels, make sure you change the values between <>):
     
