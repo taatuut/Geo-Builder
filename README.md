@@ -45,7 +45,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   - Build your docker container image of the geoBuilder geo locaion event Generator and fence detection engine: <BR>
     	- mirror the Github repo on your machine: `gh repo clone acagnetti/Geo-Builder` <BR>
         - go to main directory on local filesystem: `cd Geo-Builder` <BR>
-    	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager`<BR>
+    	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager .`<BR>
     
   - run the docker container (use the google maps file export path set above and the file names given when exporting the map levels):
     
