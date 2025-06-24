@@ -48,5 +48,17 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
        tcps://mr-connection-xxxyyyzzz.messaging.solace.cloud:55443 myvpn mr-connection-xxxyyyzzz.messaging.solace.cloud:1883 uuuuuuuuuuuuuu
        ppppppppppppppppp 20 walkpath10.csv 10 planetaxipath.csv 5 planetakeoffpath.csv 10 vehiclePath.csv`*
 
-- download the web page client to visualize the events 
+- Download the web page client to visualize the events in a web browser and configure it to connect to your Solace Broker
+  - setup a web server (example NGINX)
+  - copy the template web page client to the web server home page directory
+  - configure the Solace connection parameters in the *`index.html`* page
+      *EXAMPLE*
+      `mySessionProperties.userName = "uuuuuuuuuuuuuuu"; // Solace user name
+		   mySessionProperties.password = "ppppppppppppppp";  // Solace password
+		   mySessionProperties.vpnName = "myvpn"; // Solace VPN
+		   mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace External facing broker for demos`
+  - Open your browser and open your geo Events page hosted in your web browser
+    ![image](https://github.com/user-attachments/assets/9c75f615-0d19-486d-8cc9-662c09dfe2b0)
+
+    
 
