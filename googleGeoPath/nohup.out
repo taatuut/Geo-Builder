@@ -1,0 +1,35 @@
+//4 arguments passed to script 
+//Geolocation Type selected: PEOPLE
+connnecting to planetakeoffpath.csv...
+logged in
+Google maps export file filepath and name: ./
+		//iteration file 0
+		//iteration file 1
+		//iteration file 2
+new person with mac address 7B:C6:8D:9E:3B:54
+random Chosen path 1 for person 7B:C6:8D:9E:3B:54 between 0 paths that includes  coordinates
+MQTT broker disconnected! 
+//6 arguments passed to script 
+//Geolocation Type selected: AIRCRAFT
+requested to add Flight Number: 1
+connnecting to planetakeoffpath.csv...
+logged in
+Google maps export file filepath and name: ./
+		//iteration file 0
+		//iteration file 1
+		//iteration file 2
+		//iteration file 3
+new Plane with flight number 1
+random Chosen path 1 for Plane Flight number 1 between 0 paths that includes  coordinates
+MQTT broker disconnected! 
+//5 arguments passed to script 
+//Geolocation Type selected: VEHICLE
+requested to add Vehicle Number: 1
+connnecting to planetakeoffpath.csv...
+logged in
+Google maps export file filepath and name: ./
+		//iteration file 0
+		//iteration file 1
+		//iteration file 2
+new Vehicle with number 1
+MQTT broker disconnected! 
