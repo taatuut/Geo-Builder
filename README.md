@@ -62,7 +62,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
 
 - Download the web page client to visualize the events in a web browser and configure it to connect to your Solace Broker
   - setup a web server (example NGINX)
-  - copy the template web page client to the web server home page directory
+  - copy the template web page client to the web server home page directory (done with `gh repo clone acagnetti/Geo-Builder` step above)
   - configure the Solace connection parameters in the *`index.html`* page
       	- edit file parameters with the right values:
    		`<YOUR_GOOGLE_MAPS_KEY> <YOUR_SOLACE_USER> <YOUR_SOLACE_PASSWORD> <YOUR_SOLACE_VPN> <YOUR_SOLACE_URL>`
