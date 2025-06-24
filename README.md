@@ -1,4 +1,4 @@
-# Geo-Guilder
+# Solace Geo-Builder
 ![image](https://github.com/user-attachments/assets/36af231d-2610-451f-8fe7-d8af6e7a2a12)
 
 **Description**
