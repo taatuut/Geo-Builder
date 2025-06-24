@@ -67,4 +67,5 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   - Open your browser and open your geo Events page hosted in your web browser
     ![image](https://github.com/user-attachments/assets/9c75f615-0d19-486d-8cc9-662c09dfe2b0)
 
-    
+
+  **ENJOY!**
