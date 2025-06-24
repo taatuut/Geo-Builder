@@ -61,11 +61,11 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   - copy the template web page client to the web server home page directory
   - configure the Solace connection parameters in the *`index.html`* page
       	- edit file parameters with the right values:
-   		* <YOUR_GOOGLE_MAPS_KEY>
-     		* <YOUR_SOLACE_USER>
-  		* <YOUR_SOLACE_PASSWORD>
-    		* <YOUR_SOLACE_VPN>
-      		* <YOUR_SOLACE_URL>
+   		`<YOUR_GOOGLE_MAPS_KEY>
+     		<YOUR_SOLACE_USER>
+  		<YOUR_SOLACE_PASSWORD>
+    		<YOUR_SOLACE_VPN>
+      		<YOUR_SOLACE_URL>`
 		
 
       *EXAMPLE*
