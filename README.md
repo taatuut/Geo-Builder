@@ -33,7 +33,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   ![image](https://github.com/user-attachments/assets/507ed8a3-e482-40bd-ae74-2d2ac987a4e2)  
   - Draw your vector path and polygonsin different 'levels' (eg. People, Vehicles, planes, polygons etc..)
   ![image](https://github.com/user-attachments/assets/cf72f3b1-1fbb-449a-a85c-6bf46025235c)
-  - Export each vector path and polygons 'levels' to one csv file (eg. People, Vehicles, planes, shops, security zones etc..)
+  - Export each vector path and polygons 'levels' to a separate csv file (eg. People, Vehicles, planes, shops, security zones etc..) in a directory (eg `/home/demo/adr1/googleGeoPath/pathfiles`)
   ![image](https://github.com/user-attachments/assets/be2358d3-5a92-4b53-9d21-a358ec1c0e48)
 
 
@@ -47,7 +47,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
         - go to main directory on local filesystem: `cd Geo-Builder` <BR>
     	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager`<BR>
     
-  - run the docker container:
+  - run the docker container (use the google maps file export path set above):
     
       `sudo docker run --rm -v <googleMapsExportFilePath>:/usr/src/myapp/geofiles --name geoBuilder solace-geo-events-manager
        <tcps://SMFSolaceBrokerURL:SMFsolaceBrokerPort> <solaceBrokerVPNName> <MQTTsolaceBrokerURL:MQTTsolaceBrokerPort> <solaceUSer>
