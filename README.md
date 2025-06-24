@@ -47,12 +47,12 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
         - go to main directory on local filesystem: `cd Geo-Builder` <BR>
     	- build docker image: `sudo docker build -f Dockerfile -t solace-geo-events-manager`<BR>
     
-  - run the docker container (use the google maps file export path set above):
+  - run the docker container (use the google maps file export path set above and the file names given when exporting the map levels):
     
       `sudo docker run --rm -v <googleMapsExportFilePath>:/usr/src/myapp/geofiles --name geoBuilder solace-geo-events-manager
        <tcps://SMFSolaceBrokerURL:SMFsolaceBrokerPort> <solaceBrokerVPNName> <MQTTsolaceBrokerURL:MQTTsolaceBrokerPort> <solaceUSer>
-       <solacePassword> <numberOfPeople> <peopleWalkingPathFile> <numberOfPlanesTaxiing> <planesTaxiingPathFile> <numberOfPlanesTakingOff>
-       <planesTakingOffPathFile> <numberOfVehicles> <VehiclesPathFile>` 
+       <solacePassword> <numberOfPeople> <peopleWalkingFileName> <numberOfPlanesTaxiing> <planesTaxiingFileName> <numberOfPlanesTakingOff>
+       <planesTakingOffFileName> <numberOfVehicles> <VehiclesFileName>` 
 
        ***[EXAMPLE to run the generator for 10 people walking, 10 planes taxiing to runway, 5 planes taking off, 10 vehicles driving ]***
 
