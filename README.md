@@ -48,6 +48,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
        **<planesTakingOffPathFile>** **<numberOfVehicles>** **<VehiclesPathFile>**` 
 
        ***[EXAMPLE to run the generator for 10 people walking, 10 planes taxiing to runway, 5 planes taking off, 10 vehicles driving ]***
+
        *`sudo docker run --rm -v /home/demo/adr1/googleGeoPath/pathfiles:/usr/src/myapp/geofiles --name geoBuilder solace-geo-events-manager
        tcps://mr-connection-xxxyyyzzz.messaging.solace.cloud:55443 myvpn mr-connection-xxxyyyzzz.messaging.solace.cloud:1883 uuuuuuuuuuuuuu
        ppppppppppppppppp 20 walkpath10.csv 10 planetaxipath.csv 5 planetakeoffpath.csv 10 vehiclePath.csv`*
@@ -56,8 +57,10 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   - setup a web server (example NGINX)
   - copy the template web page client to the web server home page directory
   - configure the Solace connection parameters in the *`index.html`* page
+    
       *EXAMPLE*
-      `mySessionProperties.userName = "uuuuuuuuuuuuuuu"; // Solace user name
+
+       `mySessionProperties.userName = "uuuuuuuuuuuuuuu"; // Solace user name
 		   mySessionProperties.password = "ppppppppppppppp";  // Solace password
 		   mySessionProperties.vpnName = "myvpn"; // Solace VPN
 		   mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace External facing broker for demos`
