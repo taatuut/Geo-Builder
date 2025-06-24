@@ -26,7 +26,7 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   ![image](https://github.com/user-attachments/assets/507ed8a3-e482-40bd-ae74-2d2ac987a4e2)  
   - Draw your vector path and polygonsin different 'levels' (eg. People, Vehicles, planes, polygons etc..)
   ![image](https://github.com/user-attachments/assets/cf72f3b1-1fbb-449a-a85c-6bf46025235c)
-  - Export your vector path and polygons 'levels' to csv files
+  - Export each vector path and polygons 'levels' to one csv file (eg. People, Vehicles, planes, shops, security zones etc..)
   ![image](https://github.com/user-attachments/assets/be2358d3-5a92-4b53-9d21-a358ec1c0e48)
 
 
