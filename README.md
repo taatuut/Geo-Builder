@@ -45,10 +45,10 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   - donwload docker container image of the geoBuilder geo locaion event Generator and fence detection engine
   - run the docker container:
     
-      `sudo docker run --rm -v **<googleMapsExportFilePath>**:/usr/src/myapp/geofiles --name geoBuilder solace-geo-events-manager
-       **<tcps://SMFSolaceBrokerURL:SMFsolaceBrokerPort>** **<solaceBrokerVPNName>** **<MQTTsolaceBrokerURL:MQTTsolaceBrokerPort>** **<solaceUSer>**
-       **<solacePassword>** **<numberOfPeople>** **<peopleWalkingPathFile>** **<numberOfPlanesTaxiing>** **<planesTaxiingPathFile>** **<numberOfPlanesTakingOff>**
-       **<planesTakingOffPathFile>** **<numberOfVehicles>** **<VehiclesPathFile>**` 
+      `sudo docker run --rm -v <googleMapsExportFilePath>:/usr/src/myapp/geofiles --name geoBuilder solace-geo-events-manager
+       <tcps://SMFSolaceBrokerURL:SMFsolaceBrokerPort> <solaceBrokerVPNName> <MQTTsolaceBrokerURL:MQTTsolaceBrokerPort> <solaceUSer>
+       <solacePassword> <numberOfPeople> <peopleWalkingPathFile> <numberOfPlanesTaxiing> <planesTaxiingPathFile> <numberOfPlanesTakingOff>
+       <planesTakingOffPathFile> <numberOfVehicles> <VehiclesPathFile>` 
 
        ***[EXAMPLE to run the generator for 10 people walking, 10 planes taxiing to runway, 5 planes taking off, 10 vehicles driving ]***
 
@@ -61,16 +61,14 @@ In order to experience Geo Location Events you can use geoBuilder, A Solace Brok
   - copy the template web page client to the web server home page directory
   - configure the Solace connection parameters in the *`index.html`* page
       	- edit file parameters with the right values:
-   		`<YOUR_GOOGLE_MAPS_KEY>
-     		<YOUR_SOLACE_USER>
-  		<YOUR_SOLACE_PASSWORD>
-    		<YOUR_SOLACE_VPN>
-      		<YOUR_SOLACE_URL>`
+   		`<YOUR_GOOGLE_MAPS_KEY> <YOUR_SOLACE_USER> <YOUR_SOLACE_PASSWORD> <YOUR_SOLACE_VPN> <YOUR_SOLACE_URL>`
 		
 
       *EXAMPLE*
 
-       `mySessionProperties.userName = "myuser"; // Solace user
+       `<script src="https://maps.googleapis.com/maps/api/js?key=nkvdwbWA8CuZWFMjQRQVMkrDgtguRNTAkjs5s&v=beta&libraries=visualization"></script>
+    
+    	mySessionProperties.userName = "myuser"; // Solace user
     	namySessionProperties.password = "mypassword";  // Solace password
 	mySessionProperties.vpnName = "myvpn"; // Solace VPN
 	mySessionProperties.url = "wss://mr-connection-xxxxxxxxxx.messaging.solace.cloud:443";  // Solace URL`
