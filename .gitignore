@@ -1,0 +1,7 @@
+# Custom
+test.md
+.DS_Store
+**/.DS_Store
+/data/**/*.csv
+js/genPolygons.js
+menu.html

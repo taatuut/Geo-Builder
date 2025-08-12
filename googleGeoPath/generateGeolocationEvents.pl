@@ -30,21 +30,8 @@ use Geo::Calc::XS;
 use Time::HiRes qw(usleep nanosleep);
 use Math::Trig 'pi', 'rad2deg';
 
-#print "ONE COMMAND LINE:".$ARGV[0]." ".$ARGV[1]." ".$ARGV[2]." ".$ARGV[3]." ".$ARGV[4]." ".$ARGV[5]." ".$ARGV[6]." ".$ARGV[7]." ".$ARGV[8]." ".$ARGV[9]." ".$ARGV[10]." ".$ARGV[11]." ".$ARGV[12]."\n\n";
 
-die "\n\nGENERATEGEOLOCATIONEVENTS Error, execute  command line parameters:\n\nperl generateGeoLocationEvents.pl [AIRCRAFT [TAXIING|RUNWAY] <Flight Number>|PEOPLE|VEHICLE <Vehicle Number>|GEOFENCEONLY] <geofenceLabel(s)> <googleMapsExportFile(s)> <SolaceBrokerURL:Port> <SolaceBrokerUserName> <SolaceBrokerPassword> \n\n" if scalar (@ARGV) < 2;
-
-#  london lab appliance user 
-
-#my $mqtt_username = "adr-demo-internal-user";
-# london lab appliance password 
-#my $mqtt_password = "1rJYu8C0T.";
-# london lab appliance broker  
-#my $url = 'emea7.londonlab:3001';
-
-#my $mqtt_username = "solace-cloud-client";
-#my $mqtt_password = "ltg0ugtodbfe6pina9p7a2qb0b";
-#my $url = 'mr-connection-sc3xt4qdp5v.messaging.solace.cloud:1883';
+die "\n\nGENERATEGEOLOCATIONEVENTS Error, execute  command line parameters:\n\nperl generateGeoLocationEvents.pl [AIRCRAFT [TAXIING|RUNWAY] <Flight Number>|PEOPLE|VEHICLE <Vehicle Number>|GEOFENCEONLY|GEOFENCEBUTTONSONLY] <geofenceLabel(s)> <googleMapsExportFile(s)> <SolaceBrokerURL:Port> <SolaceBrokerUserName> <SolaceBrokerPassword> \n\n" if scalar (@ARGV) < 2;
 
 my $mqtt_username = "";
 my $mqtt_password = "";
@@ -53,8 +40,8 @@ my $url = '';
 # read first command line and print it
 my $geolocationType = $ARGV[0];
 my $numParameters = $#ARGV;
-print "\/\/$numParameters arguments passed to script \n";
-print "\/\/Geolocation Type selected: $geolocationType\n";
+print "<!--$numParameters arguments passed to script-->\n";
+print "<!--Geolocation Type selected: $geolocationType-->\n";
 
 if ($geolocationType eq 'AIRCRAFT'){
 	$aircraftMovementType = $ARGV[1];
@@ -79,7 +66,7 @@ elsif ($geolocationType eq 'PEOPLE'){
     $mqtt_password = $ARGV[4];
     $url = $ARGV[2];
 }
-elsif ($geolocationType eq 'GEOFENCEONLY'){
+elsif (($geolocationType eq 'GEOFENCEONLY') or  ($geolocationType eq 'GEOFENCEBUTTONSONLY')){
 	# read all the input files names (first one is only javascript output file name)
 	for ($zz=1;$zz<=($numParameters/2);$zz++) {
 		$googleMapsExportFiles[$zz] = $ARGV[$zz*2];
@@ -87,12 +74,40 @@ elsif ($geolocationType eq 'GEOFENCEONLY'){
 	}
 }
 
+# if only required tȯ generate pannel with geofence buttons in HTML
+if ($geolocationType eq 'GEOFENCEBUTTONSONLY') {
+	$countButtonRows = 0;
+	print "\t\t<table>\n";
+	foreach ( @geofenceTags ){
+		# skip first empty tag
+		$countButtonRows++;
+		next if ($countButtonRows == 1);
+		$tag = $_;
+        print "\t\t\t<tr>\n";
+        print "\t\t\t\t<td align=\"left\">\n";
+		print "\t\t\t\t\t<button id=\"addPolyButton\" onclick=\"notificationEnabled = 1; addNewPoly(\'$tag\'); updateSearch();\">Add <span style=\"color:#f71; font-weight: 900;\">$tag Fence<\/span><\/button>\n";
+		print "\t\t\t\t\</td>\n";
+		
+		# in first row put remove fence button
+		if ($countButtonRows == 2){
+			print "\t\t\t\t<td align=\"right\">\n";
+			print "\t\t\t\t\t<button id=\"removeAllShapesButton\" onclick=\"notificationEnabled = 0;  clearAllShapes();\">Remove<span style=\"color:#f71; font-weight: 900;\"> Fences<\/span><\/button>\n";
+			print "\t\t\t\t<\/td>\n";
+		}
+		
+		print "\t\t\t<\/tr>\n";
+	}
+	print "\t\t<\/table>\n";
+
+	die "\n\n<!-- GEOFENCE PANEL HTML CODE GENERATION DONE! -->\n\n";
+}
+
 
 # Allow unencrypted connection with credentials
 $ENV{MQTT_SIMPLE_ALLOW_INSECURE_LOGIN} = 1;
 
 
-my $destinationTopicPrefix = "adr/situation/track/v1";
+my $destinationTopicPrefix = "geo/situation/track/v1";
 my $people = {};
 my $dateTimeString = "";
 
@@ -105,8 +120,8 @@ my $startingHeading = 90;
 my $mqtt = "";
 my $fileHandleArray;  
 
-# if NOT geofencing only
-if (!($geolocationType eq 'GEOFENCEONLY')){ 
+# if NOT geofencing code generation mode
+if (!($geolocationType eq 'GEOFENCEONLY') and !($geolocationType eq 'GEOFENCEBUTTONSONLY') )  { 
 	# Connect to broker only if not doing geofencing only (no connection to broker needeD)
 	$mqtt = Net::MQTT::Simple->new($url);
 	print "connnecting to $url...\n";
@@ -586,4 +601,5 @@ elsif($geolocationType eq 'VEHICLE'){
 if (!($geolocationType eq 'GEOFENCEONLY')){ 
 	$mqtt->disconnect();
 	print "MQTT broker disconnected! \n";
+
 }
