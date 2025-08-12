@@ -5,3 +5,6 @@ test.md
 /data/**/*.csv
 js/genPolygons.js
 menu.html
+nohup.out
+**/nohup.out
+diff.log
